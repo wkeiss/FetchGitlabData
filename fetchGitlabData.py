@@ -31,10 +31,10 @@ branches = project.branches.list(all = True)
 '''
 issues = project.issues.list(all = True)
 
-#print('Tasks 仓库的 issues 数量:', + len(issues)) #output:Tasks 仓库的 issues 数量: 144
+#print('The number of Tasks respository issues:', + len(issues)) #output: The number of Tasks respository issues: 144
 
 
-#将获取的数据存入list
+#save the date to Dic
 
 issue_data = {}
 issue_note_data = {}
@@ -154,7 +154,7 @@ def get_top5(data):
 		print(k, '->', v)
 
 '''
-# 统计每一个学员的issue 数
+# Count the number of issues for each member(branch)
 group_id = 6937760
 members_name_list = get_group_member_name_list(group_id)
 #print(members_name_list)
@@ -189,7 +189,7 @@ get_top5(count_issue_of_every_member)
 '''
 
 '''
-# 统计每一个学员的 issue note 数
+# Count the number of issue notes for each member(branch)
 group_id = 6937760
 members_name_list = get_group_member_name_list(group_id)
 #print(members_name_list)
@@ -207,7 +207,7 @@ get_top5(count_issue_note_of_every_member)
 '''
 
 '''
-# 统计每一个 branch 的 commit 数
+# Count the number of commits per branch
 commit_data = load_data_from_file('commit_data.txt')
 count_commit_of_every_member = {}
 for branch_name in commit_data:
@@ -217,7 +217,7 @@ print('Top5 ci:')
 get_top5(count_commit_of_every_member)
 '''
 
-# 统计每一个学员的 commit comment 数
+# Count the number of commit comments for each member
 group_id = 6937760
 members_name_list = get_group_member_name_list(group_id)
 #print(members_name_list)
